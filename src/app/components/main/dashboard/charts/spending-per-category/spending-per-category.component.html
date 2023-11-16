@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span class="text-gray-800">Expenditure Per Category <span class="text-gray-500 text-sm">(Last 30 days)</span></span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <canvas baseChart height="400px"
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [options]="pieChartOptions"
+    >
+    </canvas>
+  </mat-card-content>
+</mat-card>

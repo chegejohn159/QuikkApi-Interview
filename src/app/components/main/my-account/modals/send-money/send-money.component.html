@@ -1,0 +1,54 @@
+<h2 mat-dialog-title>Send Money</h2>
+<mat-dialog-content class="mat-typography">
+
+  <div class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+      <app-logo></app-logo>
+      <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Send Money</h2>
+    </div>
+
+    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-full">
+      <div class="bg-white py-8 px-4 sm:rounded-lg ">
+        <form class="space-y-6" (ngSubmit)="send_money()" [formGroup]="send_money_form"
+              id="send_money_form">
+
+          <app-reactive-input
+            [form]="send_money_form"
+            [id]="'phone_number'"
+            [key]="'phone_number'"
+            [label]="'Select Recipient Account'"
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            [id]="'amount'"
+            [form]="send_money_form"
+            [key]="'amount'"
+            [label]="'Amount'"
+            [type]="'number'"
+            [step]="'1'"
+            [minval]="10"
+          >
+          </app-reactive-input>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <div class="flex flex-row sm:px-6 lg:px-8 gap-2.5">
+    <div>
+      <button (click)="close()" type="submit" class="cancel-button">Cancel</button>
+    </div>
+
+    <div>
+      <button type="submit" class="submit-button" form="send_money_form">Confirm Transaction</button>
+    </div>
+  </div>
+
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+</mat-dialog-actions>

@@ -1,0 +1,98 @@
+<div class="bg-white py-24 sm:py-32 h-full overflow-y-scroll">
+  <div class="mx-auto  px-6 lg:px-8">
+
+    <div class="grid grid-cols-12 gap-4 m-2">
+      <mat-card class="div-3-12">
+        <mat-card-header>
+          <mat-card-title>
+            <span class="text-gray-800">KES 10,000.00</span>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text text-gray-500 text-normal">Account Balance</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="div-3-12">
+        <mat-card-header>
+          <mat-card-title>
+            <span class="text-gray-800">KES 2,000.00</span>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text text-gray-500 text-normal">Transaction Costs</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="div-3-12">
+        <mat-card-header>
+          <mat-card-title>
+            <span class="text-gray-800">KES 8,000.00</span>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text text-gray-500 text-normal">Expenditure to Date</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="div-3-12">
+        <mat-card-header>
+          <mat-card-title>
+            <span class="text-gray-800">KES 28,919.00</span>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text text-gray-500 text-normal">Savings</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <div class="flex flex-col">
+          <dt class="text-base font-semibold leading-7 text-gray-900 flex flex-col items-center justify-center">
+            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <mat-icon class="white">attach_money</mat-icon>
+            </div>
+            Top up Account
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+            <p class="flex-auto">"Step into a world of effortless transactions with Quikkpay where simplicity meets security. Your financial journey, simplified</p>
+            <p class="mt-6">
+              <button (click)="top_up_account()" class="submit-button">Account Top-Up <span aria-hidden="true">→</span></button>
+            </p>
+          </dd>
+        </div>
+
+        <div class="flex flex-col">
+          <dt class="text-base font-semibold leading-7 text-gray-900 flex flex-col items-center justify-center">
+            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <mat-icon class="white">send_money</mat-icon>
+            </div>
+            Transfer Money
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+            <p class="flex-auto">Experience the power of instant transfers and financial freedom at your fingertips. Redefine the way you handle your money</p>
+            <p class="mt-6">
+              <button (click)="send_money()" class="submit-button">Send Money <span aria-hidden="true">→</span></button>
+            </p>
+          </dd>
+        </div>
+
+        <div class="flex flex-col">
+          <dt class="text-base font-semibold leading-7 text-gray-900 flex flex-col items-center justify-center">
+            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+            <mat-icon class="white">visibility</mat-icon>
+            </div>
+            View Transaction History
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
+            <p class="flex-auto">Your trusted partner in convenient, fast, and hassle-free financial transactions. Elevate your banking experience with us</p>
+            <p class="mt-6">
+              <button [routerLink]="['/secure/dashboard']" class="submit-button">Transaction History <span aria-hidden="true"> →</span></button>
+            </p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+

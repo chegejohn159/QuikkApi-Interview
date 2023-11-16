@@ -1,0 +1,34 @@
+<!--<div [formGroup]="form!!" class="w-full">-->
+<!--<mat-form-field appearance="outline" [ngClass]=input_width >-->
+<!--  <mat-label>{{ label }}</mat-label>-->
+<!--  <mat-select panelClass="selectClass"-->
+<!--              [placeholder]="placeholder"-->
+<!--              [id]="key"-->
+<!--              [formControlName]="key"-->
+<!--              [multiple]="multiple"-->
+<!--              style="margin-top: 5px"-->
+<!--  >-->
+
+<!--    <mat-option *ngFor="let choice of choices" [value]="choice.id" (click)="on_value_selection(choice)">-->
+<!--      {{choice.name.toString() |replaceUnderscore |titlecase }}-->
+<!--    </mat-option>-->
+<!--  </mat-select>-->
+
+<!--  <mat-error *ngIf="hasFieldError()" class="ml-2 col-span-12">-->
+<!--    <ng-container *ngIf="hasFieldRequiredError()">-->
+<!--      This field is required-->
+<!--    </ng-container>-->
+<!--    <ng-container *ngIf="hasPatternError()">-->
+<!--      Please enter a valid {{ label }}-->
+<!--    </ng-container>-->
+<!--  </mat-error>-->
+
+<!--</mat-form-field>-->
+
+<!--  <div *ngIf="backend_errors.length>0" class="w-full">-->
+<!--    <ng-container *ngFor="let backend_error of backend_errors">-->
+<!--      <app-input-error [error_message]="backend_error"></app-input-error>-->
+<!--    </ng-container>-->
+<!--  </div>-->
+
+<!--</div>-->

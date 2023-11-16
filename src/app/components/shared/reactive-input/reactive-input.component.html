@@ -1,0 +1,31 @@
+<div [formGroup]="form!!"  class="mt-2">
+
+  <div>
+    <label class="default-label">{{ label }} </label>
+    <div class="mt-1">
+      <input class="default-input"
+             [formControlName]="key"
+             [id]="id"
+             [pattern]="pattern"
+             [placeholder]="placeholder"
+             [type]="type"
+             step="{{step}}">
+    </div>
+  </div>
+
+  <mat-error *ngIf="hasFieldError()">
+    <ng-container *ngIf="showError()">
+      This field is required
+    </ng-container>
+
+    <ng-container *ngIf="hasMinError()">
+      This cannot be less than {{minval}}
+    </ng-container>
+    <ng-container *ngIf="notIntegerError()">
+      This Field Cannot Contain Decimals
+    </ng-container>
+    <ng-container *ngIf="hasPatternError() || hasEmailError()">
+      This field does not match required format
+    </ng-container>
+  </mat-error>
+</div>

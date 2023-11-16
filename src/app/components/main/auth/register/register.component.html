@@ -1,0 +1,124 @@
+<div class="flex flex-col items-center justify-center w-full">
+  <form class=" divide-gray-200 w-full p-4 md:max-w-2xl"  (ngSubmit)="register()" [formGroup]="registration_form"
+        id="registeration_form">
+    <div class=" divide-gray-200">
+
+      <div class="pt-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+          <app-logo></app-logo>
+          <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Create An account</h2>
+        </div>
+        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'first_name'"
+            [key]="'first_name'"
+            [label]="'First Name'"
+
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'last_name'"
+            [key]="'last_name'"
+            [label]="'Last Name'"
+
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'customer-email'"
+            [key]="'email'"
+            [label]="'Email address'"
+            [type]="'email'"
+          >
+          </app-reactive-input>
+
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'phone_number'"
+            [key]="'phone_number'"
+            [label]="'Phone Number'"
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'country'"
+            [key]="'country'"
+            [label]="'Country'"
+
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'city'"
+            [key]="'city'"
+            [label]="'City/ Town'"
+
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'customer-password'"
+            [key]="'password'"
+            [label]="'Password'"
+            [type]="'password'"
+          >
+          </app-reactive-input>
+
+          <app-reactive-input
+            class="sm:col-span-3"
+            [form]="registration_form"
+            [id]="'confirm-password'"
+            [key]="'confirm_password'"
+            [label]="'Confirm Password'"
+            [type]="'password'"
+          >
+          </app-reactive-input>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="py-5 border-t">
+      <div class="flex justify-end">
+        <button type="submit" class="submit-button">Create Account</button>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute inset-0 flex items-center">
+        <div class="w-full border-t border-gray-300"></div>
+      </div>
+      <div class="relative flex justify-center text-sm">
+        <span class="bg-white px-2 text-gray-500">Or Already has An Account</span>
+      </div>
+    </div>
+
+    <div class="pt-4">
+      <div class="flex justify-end">
+        <button [routerLink]="['/login']" type="button" class="submit-button">Log In</button>
+      </div>
+    </div>
+
+  </form>
+
+
+</div>
+

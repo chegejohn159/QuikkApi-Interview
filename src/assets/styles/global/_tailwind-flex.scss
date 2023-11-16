@@ -1,0 +1,11 @@
+@layer components {
+  .flex-row-between{
+    @apply flex flex-row justify-between;
+  }
+  .flex-col-between{
+    @apply flex flex-col justify-between;
+  }
+  .chip{
+    @apply rounded-buttons px-2 py-1 flex items-center h-full;
+  }
+}

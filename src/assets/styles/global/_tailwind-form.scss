@@ -1,0 +1,39 @@
+@layer components {
+  .default-input {
+    @apply block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm;
+  }
+
+  .default-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .submit-button{
+    @apply flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+  }
+
+  .cancel-button{
+    @apply flex w-full justify-center rounded-md border border-transparent bg-indigo-100 py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2;
+  }
+
+  .call-to-action-button{
+    @apply flex w-full justify-start rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+  }
+
+  .div-6-12{
+    @apply lg:col-span-6 col-span-12;
+  }
+  .div-8-12{
+    @apply lg:col-span-8 col-span-12;
+  }
+  .div-4-12{
+    @apply lg:col-span-4 col-span-12;
+  }
+
+  .div-4-6-12{
+    @apply 2xl:col-span-4 lg:col-span-6 col-span-12;
+  }
+
+  .div-3-12{
+    @apply lg:col-span-3 col-span-12;
+  }
+}

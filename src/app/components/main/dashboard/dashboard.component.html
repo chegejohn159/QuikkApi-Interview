@@ -1,0 +1,41 @@
+<div class="flex flex-col overflow-y-scroll h-full py-24 sm:py-32">
+
+  <div>
+    <h3 class="text-lg font-medium leading-6 text-gray-900 pl-4">Last 30 days</h3>
+    <dl class="grid grid-cols-1 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:grid-cols-3 md:divide-y-0 md:divide-x">
+      <div *ngFor="let stat of monthly_stats" class="px-4 py-3 sm:p-6">
+        <dt class="text-base font-normal text-gray-900">{{ stat.name }}</dt>
+        <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+          <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+            {{ stat.stat }}
+            <span class="ml-2 text-sm font-medium text-gray-500">from {{ stat.previousStat }}</span>
+          </div>
+
+          <div [ngClass]="[stat.changeType === 'increase' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800', 'inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium md:mt-2 lg:mt-0']">
+
+            <svg *ngIf="stat.changeType === 'increase'" class="stat-success-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd" />
+            </svg>
+
+            <svg *ngIf="stat.changeType === 'decrease'" class="stat-error-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+            </svg>
+
+            <span class="sr-only"> {{ stat.changeType === 'increase' ? 'Increased' : 'Decreased' }} by </span>
+            {{ stat.change }}
+          </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  <div class="grid grid-cols-12 gap-4 mt-4">
+    <div class="div-6-12">
+      <app-monthly-spending></app-monthly-spending>
+    </div>
+    <div class="div-6-12">
+      <app-spending-per-category></app-spending-per-category>
+    </div>
+
+  </div>
+</div>
